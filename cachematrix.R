@@ -5,6 +5,12 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 
+inv <- NULL 
+set <- function(y) {                ## definiton of the set function to assign new 
+x <<- y                             ## value of matrix in parent environment
+inv <<- NULL                        ## if matrix is new, reset inv to NULL
+        }
+        
 }
 
 
