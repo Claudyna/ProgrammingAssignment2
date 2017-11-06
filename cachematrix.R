@@ -23,13 +23,13 @@ inv <<- NULL                        ## if matrix is new, reset inv to NULL
 ## Return a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
-     inv <- x$getinverse()
-     if(!is.null(inv)) {
+     inv <- x$getinverse() ##  getting the matrix inverse
+     if(!is.null(inv)) { ## only if marix inverse isn't null
          message("getting cached matrix")
-         return(inv)
+         return(inv) ## return of  previously calculated inversion of matrix
      }
      data <- x$get()
-    inv <- solve(data, ...)
+    inv <- solve(data, ...) ##calculation of the matrix inverse
     x$setinverse(inv)
-    inv
+    inv ##returning of  matrix inverse
   }		  
